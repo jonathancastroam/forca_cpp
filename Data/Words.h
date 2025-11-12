@@ -6,6 +6,67 @@ using namespace std;
 class Words
 {
 private:
+    const string animais[12] = {
+        "CACHORRO",
+        "GATO",
+        "ELEFANTE",
+        "LEAO",
+        "TIGRE",
+        "ZEBRA",
+        "GIRAFA",
+        "MACACO",
+        "PANDA",
+        "COELHO",
+        "RINOCERONTE",
+        "TUBARAO"
+    };
+
+    const string frutas[12] = {
+        "BANANA",
+        "MACA",
+        "LARANJA",
+        "MORANGO",
+        "ABACAXI",
+        "UVA",
+        "PERA",
+        "MELANCIA",
+        "MAMAO",
+        "KIWI",
+        "CEREJA",
+        "MANGA"
+    };
+
+    const string objetos[12] = {
+        "CADEIRA",
+        "MESA",
+        "COMPUTADOR",
+        "TELEFONE",
+        "CANETA",
+        "LIVRO",
+        "TESOURA",
+        "COPO",
+        "GARFO",
+        "CHAVE",
+        "MOCHILA",
+        "LAMPADA"
+    };
+
+    const string paises[12] = {
+        "BRASIL",
+        "CANADA",
+        "ESPANHA",
+        "PORTUGAL",
+        "JAPAO",
+        "ITALIA",
+        "MEXICO",
+        "ALEMANHA",
+        "CHINA",
+        "INDIA",
+        "EGITO",
+        "ISRAEL"
+    };
+
+public:
     enum Categories {
         ANIMAIS,
         FRUTAS,
@@ -13,17 +74,11 @@ private:
         PAISES
     };
 
-    static const string animais[12];
-    static const string frutas[12];
-    static const string objetos[12];
-    static const string paises[12];
-
-public:
-    static const string GetRandomWord(Categories category);
+    string GetRandomWord(Categories category);
     
-    static const string GetAnimal(int index) { return animais[index]; }
-    static const string GetFruit(int index) { return frutas[index]; }
-    static const string GetObject(int index) { return objetos[index]; }
-    static const string GetCountry(int index) { return paises[index]; }
+    string GetAnimal(int index) { return animais[index]; }
+    string GetFruit(int index) { return frutas[index]; }
+    string GetObject(int index) { return objetos[index]; }
+    string GetCountry(int index) { return paises[index]; }
 };
 

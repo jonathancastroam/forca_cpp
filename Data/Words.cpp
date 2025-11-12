@@ -1,74 +1,14 @@
 #include "Words.h"
-#include <ctime>
+#include <random>
 
 using namespace std;
 
-string animais[12] = {
-    "CACHORRO",
-    "GATO",
-    "ELEFANTE",
-    "LEAO",
-    "TIGRE",
-    "ZEBRA",
-    "GIRAFA",
-    "MACACO",
-    "PANDA",
-    "COELHO",
-    "RINOCERONTE",
-    "TUBARAO"
-};
+string Words::GetRandomWord(Categories category) {
 
-string frutas[12] = {
-    "BANANA",
-    "MACA",
-    "LARANJA",
-    "MORANGO",
-    "ABACAXI",
-    "UVA",
-    "PERA",
-    "MELANCIA",
-    "MAMAO",
-    "KIWI",
-    "CEREJA",
-    "MANGA"
-};
-
-string objetos[12] = {
-    "CADEIRA",
-    "MESA",
-    "COMPUTADOR",
-    "TELEFONE",
-    "CANETA",
-    "LIVRO",
-    "TESOURA",
-    "COPO",
-    "GARFO",
-    "CHAVE",
-    "MOCHILA",
-    "LAMPADA"
-};
-
-string paises[12] = {
-    "BRASIL",
-    "CANADA",
-    "ESPANHA",
-    "PORTUGAL",
-    "JAPAO",
-    "ITALIA",
-    "MEXICO",
-    "ALEMANHA",
-    "CHINA",
-    "INDIA",
-    "EGITO",
-    "ISRAEL"
-};
-
-const string Words::GetRandomWord(Categories category) {
-    // Inicializa o gerador de números aleatórios
-    srand(time(0));
-
-    int randomIndex = rand() % 12;
-
+    static mt19937 rng(random_device{}());
+    static uniform_int_distribution<int> getRandom(1, 12);
+    int randomIndex = getRandom(rng);
+    
     switch (category) {
     case ANIMAIS:
         return GetAnimal(randomIndex);

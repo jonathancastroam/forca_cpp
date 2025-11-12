@@ -1,3 +1,4 @@
+#include "Data\Words.h"
 #include <iostream>
 
 using namespace std;
@@ -12,5 +13,11 @@ int main() {
     |_|      \___/  |_|  \_\  \____| |_| |_|
 
     )" << endl;
+
+    Words words;
+
+    // Exemplo de palavra
+    cout << words.GetRandomWord(Words::Categories::ANIMAIS);
+
     return 0;
 }
