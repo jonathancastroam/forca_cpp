@@ -12,6 +12,9 @@ Retrieved 2025-11-11, License - CC BY-SA 4.0
 *.user
 *.userosscache
 *.sln.docstates
+!.gitignore
+!LICENSE
+!README.md
 
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
