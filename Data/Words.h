@@ -1,5 +1,6 @@
 #pragma once
 #include <string>
+#include <map>
 
 using namespace std;
 
@@ -73,6 +74,13 @@ public:
         OBJETOS,
         PAISES
     };
+
+    static std::map<int, Categories> MapCategories() {
+        std::map<int, Categories> mapCat = { {1, ANIMAIS}, {2, FRUTAS}, {3, OBJETOS}, {4, PAISES} };
+        return mapCat;
+    };
+
+    static string CategoryToString(Categories category);
 
     string GetRandomWord(Categories category);
     
