@@ -3,6 +3,22 @@
 
 using namespace std;
 
+string Words::CategoryToString(Categories category)
+{
+    switch (category) {
+    case ANIMAIS:
+        return "Animais";
+    case FRUTAS:
+        return "Frutas";
+    case OBJETOS:
+        return "Objetos";
+    case PAISES:
+        return "Países";
+    default:
+        return "ERRO";
+    }
+}
+
 string Words::GetRandomWord(Categories category) {
 
     static mt19937 rng(random_device{}());
