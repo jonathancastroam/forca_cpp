@@ -127,7 +127,8 @@
     <ClCompile Include="App\MainMenu.cpp" />
     <ClCompile Include="forca_cpp.cpp" />
     <ClCompile Include="Data\Words.cpp" />
-    <ClCompile Include="App\Graphics.cpp" />
+    <ClCompile Include="Data\Graphics.cpp" />
+    <ClCompile Include="App\SettingsMenu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -137,7 +138,8 @@
   <ItemGroup>
     <ClInclude Include="App\MainMenu.h" />
     <ClInclude Include="Data\Words.h" />
-    <ClInclude Include="App\Graphics.h" />
+    <ClInclude Include="Data\Graphics.h" />
+    <ClInclude Include="App\SettingsMenu.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
