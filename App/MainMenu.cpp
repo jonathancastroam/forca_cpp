@@ -1,11 +1,12 @@
 #include "MainMenu.h"
-#include "../Data/Graphics.h"
+#include "../App/Graphics.h"
 #include "../Data/Words.h"
 
+#include <cstdlib>
 #include <conio.h> // Necessário para _getch()
-#include <cstdlib> // Necessário para system()
+#include <iostream>
 #include <map>
-
+#include <string>
 using namespace std;
 
 int currentOption = 1;
@@ -41,8 +42,7 @@ string MainMenu::OptionsToString(Options option)
 /// First menu execution on app
 /// </summary>
 void MainMenu::ShowStartMenu() {
-    system("cls");
-
+    Graphics::ClearConsole();
     Graphics::PrintTitle();
 
     PrintMainMenu();
@@ -53,8 +53,7 @@ void MainMenu::ShowStartMenu() {
 /// First menu execution on app
 /// </summary>
 void MainMenu::ShowCategoriesMenu() {
-    system("cls");
-
+    Graphics::ClearConsole();
     Graphics::PrintTitle();
 
     PrintCategoryMenu();

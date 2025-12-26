@@ -1,12 +1,8 @@
 #include "SettingsMenu.h"
-#include "../Data/Graphics.h"
-#include <cstdlib> // Necessário para system()
-#include <iostream>
+#include "../App/Graphics.h"
 
 void SettingsMenu::ShowSettingsMenu()
 {
-	// WIP
-	system("cls");
-	
+	Graphics::ClearConsole();
 	Graphics::PrintTitle();
 }
